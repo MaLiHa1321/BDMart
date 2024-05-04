@@ -1,8 +1,39 @@
-import { Link } from "react-router-dom";
-import img1 from '../../assets/react.svg'
+import { Link, useNavigate } from "react-router-dom";
+import { imageUpload } from "../../Api/utlis";
+import { useContext } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 
 const Register = () => {
+
+  const {createUser,updateUser} = useContext(AuthContext);
+  const navigate = useNavigate();
+
+const handleRegister =async(e)=>{
+           e.preventDefault();
+           const form = e.target;
+           const name = form.name.value;
+           const email = form.email.value;
+           const pass = form.password.value;
+           const image = form.image.files[0];
+           const imageData = await imageUpload(image);
+           const photo = imageData?.data?.display_url;
+
+           console.log(name,email,pass,photo);
+           createUser(email,pass)
+           .then(result => {
+            console.log(result.user)
+            navigate('/login')
+            updateUser(name,photo)
+
+           })
+           .catch(err => console.log(err))
+
+   
+
+}
+
+
     return (
         <div className="hero min-h-screen ">
         <div className="hero-content flex-col lg:flex-row-reverse">
@@ -11,30 +42,30 @@ const Register = () => {
            
           </div>
           <div className="card shrink-0 w-full max-w-sm shadow-2xl m-3 p-4 " style={{ backgroundColor: 'rgba(0, 0, 0, 0.3)' }}>
-            <form className="card-body">
+            <form onSubmit={handleRegister} className="card-body">
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Name</span>
                 </label>
-                <input type="name" placeholder="name" className="input input-bordered" required />
+                <input type="name" placeholder="name" name="name" className="input input-bordered" required />
               </div>
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Email</span>
                 </label>
-                <input type="email" placeholder="email" className="input input-bordered" required />
+                <input type="email" placeholder="email" name="email" className="input input-bordered" required />
               </div>
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Password</span>
                 </label>
-                <input type="password" placeholder="password" className="input input-bordered" required />
+                <input type="password" placeholder="password" name="password" className="input input-bordered" required />
               </div>
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Photo</span>
                 </label>
-                <input type="file" className="file-input file-input-bordered file-input-primary w-full max-w-xs" />
+                <input type="file" name="image" className="file-input file-input-bordered file-input-primary w-full max-w-xs" />
               </div>
               <div className="form-control mt-6">
                 <button className="btn btn-primary">Register</button>
