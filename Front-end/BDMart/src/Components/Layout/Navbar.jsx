@@ -1,29 +1,55 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
+import { AiFillHeart } from "react-icons/ai";
 
 
 const Navbar = () => {
   const {user,logOut} = useContext(AuthContext);
     return (
-        <div className="navbar bg-base-100">
-        <div className="navbar-start">
-          <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
-            </div>
-            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-              <li><a>Homepage</a></li>
-              <li><a>Portfolio</a></li>
-              <li><a>About</a></li>
-            </ul>
-          </div>
-        </div>
-      
-        <div className="navbar-center">
-          <a className="btn btn-ghost text-xl">BDMart</a>
-        </div>
-        <div className="navbar-end">
+ 
+<div className="navbar bg-base-100">
+  <div className="navbar-start">
+    <div className="dropdown">
+      <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+      </div>
+      <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+        <li><a>Item 1</a></li>
+        <li>
+          <a>Parent</a>
+          <ul className="p-2">
+            <li><a>Submenu 1</a></li>
+            <li><a>Submenu 2</a></li>
+          </ul>
+        </li>
+        <li><a>Item 3</a></li>
+      </ul>
+    </div>
+    <a className="btn btn-ghost text-xl">BDMart</a>
+  </div>
+  <div className="navbar-center hidden lg:flex">
+    <ul className="menu menu-horizontal px-1">
+      <li><a><Link to='/'>Home</Link> </a></li>
+      <li>
+        <details>
+          <summary>Category</summary>
+          <ul className="p-3 z-10">
+            <li><a>Submenu1</a></li>
+            <li><a>Submenu2</a></li>
+          </ul>
+        </details>
+      </li>
+      <li><a>About Us</a></li>
+      <li><a>Contact</a></li>
+    </ul>
+  </div>
+  <div className="navbar-end">
+
+  <div className="form-control">
+      <input type="text" placeholder="Search" className="input input-bordered w-24 md:w-auto" />
+    </div>
+    
         <div className="flex-none">
     <div className="dropdown dropdown-end">
       <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
@@ -41,6 +67,28 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+
+    </div>
+    <div className="dropdown dropdown-end">
+      <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+        <div className="indicator">
+          <AiFillHeart size={22} fill="red"></AiFillHeart>
+     
+
+
+          <span className="badge badge-sm indicator-item">0</span>
+        </div>
+      </div>
+      <div tabIndex={0} className="mt-3 z-[1] card card-compact dropdown-content w-52 bg-base-100 shadow">
+        <div className="card-body">
+          <span className="font-bold text-lg">0 Items</span>
+         
+          <div className="card-actions">
+            <button className="btn btn-primary btn-block">View cart</button>
+          </div>
+        </div>
+      </div>
+
     </div>
     <div className="dropdown dropdown-end">
             {user?.email ? (
@@ -75,3 +123,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
