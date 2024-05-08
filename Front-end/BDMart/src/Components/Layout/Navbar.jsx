@@ -2,6 +2,8 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { AiFillHeart } from "react-icons/ai";
+import { BsCart4 } from "react-icons/bs";
+
 
 
 const Navbar = () => {
@@ -26,10 +28,10 @@ const Navbar = () => {
         <li><a>Item 3</a></li>
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">BDMart</a>
+    <a className="btn btn-ghost text-xl border-4 border-dark border-teal-400">BDMart <BsCart4 /></a>
   </div>
   <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1">
+    <ul className="menu menu-horizontal px-1 text-lg">
       <li><a><Link to='/'>Home</Link> </a></li>
       <li>
         <details>

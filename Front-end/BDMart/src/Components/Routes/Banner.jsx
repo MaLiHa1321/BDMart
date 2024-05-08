@@ -2,7 +2,7 @@
 
 const Banner = () => {
     return (
-        <div className='mt-2'>
+        <div className='mt-0'>
             <div className="carousel w-full h-[600px]">
   <div id="slide1" className="carousel-item relative w-full">
     <img src="https://i.ibb.co/KqQpdRF/b1.png" className="w-full rounded-lg" />
@@ -12,7 +12,7 @@ const Banner = () => {
         <h2 className='text-2xl lg:text-5xl font-bold'>Welcome to BDMart, <br /> Your One-Stop Shop for All Your Needs!</h2>
         <p>Discover an Extensive Range of Products at Unbeatable Prices. From Groceries to Electronics, We've Got You Covered. Shop Now and Experience Convenience Like Never Before!</p>
         <div className='flex flex-col md:flex-row gap-3'>
-        <button className="btn btn-success text-white">Discover More</button>
+        <button className="btn btn-outline btn-success text-white">Discover More</button>
         <button className="btn btn-outline btn-error">Shop Now</button>
         </div>
     </div>
@@ -30,8 +30,8 @@ const Banner = () => {
         <h2 className='text-2xl lg:text-5xl font-bold'>Discover Unbeatable Prices at BDMart!</h2>
         <p>There are many variations of passages of  available, but the majority have suffered alteration in some form</p>
         <div className='flex flex-col md:flex-row gap-3'>
-        <button className="btn btn-success text-white">Discover More</button>
-        <button className="btn btn-outline btn-error">Latest Project</button>
+        <button className="btn btn-success  text-white">Discover More</button>
+        <button className="btn btn-outline btn-error">Shop Now</button>
         </div>
     </div>
     </div>
@@ -49,7 +49,7 @@ const Banner = () => {
         <p>Experience the Diversity of Choices at SuperShop, Where Quality is Never Compromised.</p>
         <div className='flex flex-col md:flex-row gap-3'>
         <button className="btn btn-success text-white">Discover More</button>
-        <button className="btn btn-outline btn-error">Latest Project</button>
+        <button className="btn btn-outline btn-error">Shop Now</button>
         </div>
     </div>
     </div>
@@ -67,7 +67,7 @@ const Banner = () => {
         <p>There are many variations of passages of  available, but the majority have suffered alteration in some form</p>
         <div className='flex flex-col md:flex-row gap-3'>
         <button className="btn btn-success text-white">Discover More</button>
-        <button className="btn btn-outline btn-error">Latest Project</button>
+        <button className="btn btn-outline btn-error">Shop Now</button>
         </div>
     </div>
     </div>

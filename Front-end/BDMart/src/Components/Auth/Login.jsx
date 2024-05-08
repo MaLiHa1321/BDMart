@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
-import img1 from '../../assets/logi.jpg'
 
 
 const Login = () => {
@@ -30,7 +29,7 @@ const Login = () => {
             <h1 className="text-4xl font-bold text-white">Login now!</h1>
             
           </div>
-          <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100 p-4" style={{ backgroundColor: 'rgba(0, 0, 0, 0.3)' }}>
+          <div className="card w-full max-w-sm shadow-2xl bg-base-100 p-4" style={{ backgroundColor: 'rgba(0, 0, 0, 0.3)' }}>
             <form  onSubmit={handleLogin} className="card-body">
               <div className="form-control">
                 <label className="label">
@@ -51,7 +50,7 @@ const Login = () => {
             </form>
             <div className="flex">
                 <p className="text-white">Doesn't have an account?</p>
-            <Link to="/signup" className="text-indigo-950 font-bold text-white">Register</Link>
+            <Link to="/signup" className="text-indigo-950 font-bold">Register</Link>
             </div>
           </div>
         </div>

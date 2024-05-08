@@ -3,7 +3,7 @@ import Navbar from './Navbar';
 
 const MainLayout = () => {
     return (
-        <div className='w-full mx-auto mt-0 p-2'>
+        <div className='w-full mx-auto mt-0 p-2 pt-0'>
             <Navbar></Navbar>
         <Outlet></Outlet>
             

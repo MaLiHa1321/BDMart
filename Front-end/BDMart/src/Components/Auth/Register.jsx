@@ -29,41 +29,39 @@ const handleRegister =async(e)=>{
            })
            .catch(err => console.log(err))
 
-   
-
 }
 
 
     return (
-        <div className="hero min-h-screen ">
+        <div className="hero min-h-screen bg-gradient-to-r from-indigo-500 ">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left">
-            <h1 className="text-5xl font-bold">Sign up now!</h1>
+            <h1 className="text-5xl font-bold text-white">Sign up now!</h1>
            
           </div>
           <div className="card shrink-0 w-full max-w-sm shadow-2xl m-3 p-4 " style={{ backgroundColor: 'rgba(0, 0, 0, 0.3)' }}>
             <form onSubmit={handleRegister} className="card-body">
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Name</span>
+                  <span className="label-text text-white">Name</span>
                 </label>
                 <input type="name" placeholder="name" name="name" className="input input-bordered" required />
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Email</span>
+                  <span className="label-text text-white">Email</span>
                 </label>
                 <input type="email" placeholder="email" name="email" className="input input-bordered" required />
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Password</span>
+                  <span className="label-text text-white">Password</span>
                 </label>
                 <input type="password" placeholder="password" name="password" className="input input-bordered" required />
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Photo</span>
+                  <span className="label-text text-white">Photo</span>
                 </label>
                 <input type="file" name="image" className="file-input file-input-bordered file-input-primary w-full max-w-xs" />
               </div>
@@ -72,7 +70,7 @@ const handleRegister =async(e)=>{
               </div>
             </form>
             <div className="flex">
-                <p>Already have an account?</p>
+                <p className="text-white">Already have an account?</p>
             <Link to="/login" className="text-indigo-950 font-bold">Login</Link>
             </div>
           </div>
