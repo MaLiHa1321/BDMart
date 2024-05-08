@@ -6,9 +6,11 @@ import { BsCart4 } from "react-icons/bs";
 
 
 
+
 const Navbar = () => {
   const {user,logOut} = useContext(AuthContext);
     return (
+      
  
 <div className="navbar bg-base-100">
   <div className="navbar-start">

@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
+import toast, { Toaster } from 'react-hot-toast';
 
 
 const Login = () => {
@@ -17,13 +18,19 @@ const Login = () => {
     signInUser(email,pass)
     .then(result => {
       console.log(result.user);
-      e.target.reset();
+      toast.success('Successfully Login!')
       navigate('/');
     })
-    .catch(err => console.log(err))
+    .catch(err => toast.error("Invalid email or password."))
   }
     return (
+      <div>
+                  <Toaster
+  position="top-right"
+  reverseOrder={false}
+/>
         <div className="hero min-h-screen bg-gradient-to-r from-indigo-500 ">
+
         <div className="hero-content flex-col ">
           <div className="text-center ">
             <h1 className="text-4xl font-bold text-white">Login now!</h1>
@@ -54,6 +61,7 @@ const Login = () => {
             </div>
           </div>
         </div>
+      </div>
       </div>
     );
 };

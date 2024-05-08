@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { imageUpload } from "../../Api/utlis";
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
+import toast, { Toaster } from 'react-hot-toast';
 
 
 const Register = () => {
@@ -23,17 +24,25 @@ const handleRegister =async(e)=>{
            createUser(email,pass)
            .then(result => {
             console.log(result.user)
+            toast.success('Successfully registared! Now Login...')
             navigate('/login')
             updateUser(name,photo)
 
            })
-           .catch(err => console.log(err))
+           .catch(err => toast.error("Invalid email or password."))
 
 }
 
 
     return (
+      <div>
+                <Toaster
+  position="top-right"
+  reverseOrder={false}
+/>
+
         <div className="hero min-h-screen bg-gradient-to-r from-indigo-500 ">
+          
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold text-white">Sign up now!</h1>
@@ -76,6 +85,8 @@ const handleRegister =async(e)=>{
           </div>
         </div>
       </div>
+      </div>
+
     );
 };
 
