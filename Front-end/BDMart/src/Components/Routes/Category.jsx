@@ -1,9 +1,36 @@
+import { useEffect, useState } from "react";
+
 
 
 const Category = () => {
+  const [category, setCategory] = useState([]);
+
+    useEffect(() =>{
+        fetch('data.json')
+        .then(res => res.json()) 
+        .then(data => setCategory(data))
+    })
+
     return (
-        <div>
-            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione deleniti explicabo libero enim vero ducimus, itaque accusamus saepe et cumque! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora at laboriosam adipisci doloremque nisi eos maiores voluptatibus beatae earum vero blanditiis sint distinctio eius tempore expedita enim corporis recusandae aliquam, obcaecati alias iure numquam ad temporibus consequuntur. Ducimus pariatur quasi esse molestiae commodi eligendi corporis repellendus nihil laborum? Soluta doloremque illo atque excepturi tempora voluptas quas libero, velit sapiente ratione nesciunt provident eum possimus aliquid, molestias cum. Voluptate illum fugit veniam ut quae veritatis facilis, repudiandae, voluptatem cupiditate cumque iste, culpa ullam consectetur. Sint ipsam, reprehenderit et consequuntur eveniet perspiciatis eum at quam, quia magnam repudiandae aliquid culpa animi provident.</h2>
+        <div className="mt-5">
+            <h2 className="text-2xl md:text-5xl font-bold text-center">Our <span className="text-green-800">category</span> </h2>
+            <div  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-10/12 mx-auto mt-5">
+
+            {
+                category?.map((cate,idx) => <div key={idx} className="w-[300px] h-[300px] border-2 border-dark border-black rounded-xl">
+                   <div>
+                    <img src={cate?.image} alt="" className="w-[200px] h-[200px] object-cover mx-auto" />
+                    <h2 className="text-center font-bold">{cate?.name}</h2>
+                    <h2 className="text-center font-bold">Rating: {cate?.rating}</h2>
+                   </div>
+                </div>)
+
+            }
+            </div>
+
+        
+
+        
             
         </div>
     );

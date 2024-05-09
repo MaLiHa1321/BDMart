@@ -3,6 +3,7 @@ import { imageUpload } from "../../Api/utlis";
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import toast, { Toaster } from 'react-hot-toast';
+import img1 from '../../assets/image (1).png';
 
 
 const Register = () => {
@@ -20,7 +21,22 @@ const handleRegister =async(e)=>{
            const imageData = await imageUpload(image);
            const photo = imageData?.data?.display_url;
 
+
+
            console.log(name,email,pass,photo);
+
+           if(pass.length < 6) {
+            toast.error('password should have 6 letter')
+            return;
+          }
+         if(!/[A-Z]/.test(pass)){
+          toast.error("password should have atleast capital letter")
+            return;
+          }
+         if(!/[@$!%*?&]/.test(pass)){
+          toast.error("password should have atleast spcial character")
+          return;
+         }
            createUser(email,pass)
            .then(result => {
             console.log(result.user)
@@ -29,7 +45,11 @@ const handleRegister =async(e)=>{
             updateUser(name,photo)
 
            })
-           .catch(err => toast.error("Invalid email or password."))
+           .catch(err =>{
+            toast.error("Invalid email or password.")
+            console.log(err)
+
+           } )
 
 }
 
@@ -41,7 +61,7 @@ const handleRegister =async(e)=>{
   reverseOrder={false}
 />
 
-        <div className="hero min-h-screen bg-gradient-to-r from-indigo-500 ">
+        <div className="hero min-h-screen bg-gradient-to-r from-indigo-500" style={{ backgroundImage: `url(${img1})`}}>
           
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left">

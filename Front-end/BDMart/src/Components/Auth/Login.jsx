@@ -21,7 +21,10 @@ const Login = () => {
       toast.success('Successfully Login!')
       navigate('/');
     })
-    .catch(err => toast.error("Invalid email or password."))
+    .catch(err => {
+      toast.error("Invalid email or password.")
+      console.log(err)
+    })
   }
     return (
       <div>

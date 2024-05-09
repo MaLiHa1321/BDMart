@@ -11,6 +11,7 @@ import Home from './Components/Routes/Home';
 import Login from './Components/Auth/Login';
 import Register from './Components/Auth/Register';
 import AuthProvider from './Provider/AuthProvider';
+import Category from './Components/Routes/Category';
 
 const router = createBrowserRouter([
   {
@@ -28,7 +29,12 @@ const router = createBrowserRouter([
       {
         path: '/signup',
         element: <Register />
-      }
+      },
+      // {
+      //   path: '/category',
+      //   element: <Category />,
+      //   loader: ()=> fetch('data.json'),
+      // }
     ]
   },
 ]);
