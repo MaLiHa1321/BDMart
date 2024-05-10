@@ -3,7 +3,7 @@ import { imageUpload } from "../../Api/utlis";
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import toast, { Toaster } from 'react-hot-toast';
-import img1 from '../../assets/image (1).png';
+
 
 
 const Register = () => {
@@ -61,12 +61,13 @@ const handleRegister =async(e)=>{
   reverseOrder={false}
 />
 
-        <div className="hero min-h-screen bg-gradient-to-r from-indigo-500" style={{ backgroundImage: `url(${img1})`}}>
+        <div className="hero min-h-screen bg-[url('https://i.ibb.co/chQbYnz/pciu.jpg')]" >
+
           
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold text-white">Sign up now!</h1>
-           
+ 
           </div>
           <div className="card shrink-0 w-full max-w-sm shadow-2xl m-3 p-4 " style={{ backgroundColor: 'rgba(0, 0, 0, 0.3)' }}>
             <form onSubmit={handleRegister} className="card-body">

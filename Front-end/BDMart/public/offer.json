@@ -1,0 +1,58 @@
+[
+    {
+      "id": "1",
+      "image": "https://static-01.daraz.com.bd/p/b802b8ebb0a784ec791caa75e2d4de66.jpg",
+      "name": "iPhone 14 Pro Max",
+      "price": 799.99,
+      "rating": 4.7
+    },
+    {
+      "id": "2",
+      "image": "https://static-01.daraz.com.bd/p/1ec88cbfff48b223f1dbb92ce20df4ec.jpg",
+      "name": "iPhone 14 Pro",
+      "price": 899.99,
+      "rating": 4.9
+    },
+    {
+      "id": "3",
+      "image": "https://static-01.daraz.com.bd/p/986dd21bae23af5b4186e0029dce42a7.jpg",
+      "name": "iPhone 12",
+      "price": 999.99,
+      "rating": 3.5
+    },
+    {
+      "id": "7",
+      "image": "https://static-01.daraz.com.bd/p/3fc5a8e21be21833bd0bcf2b8382fddc.jpg",
+      "name": "Samsung Galaxy A33",
+      "price": 999.99,
+      "rating": 4.7
+    },
+    {
+      "id": "11",
+      "image": "https://static-01.daraz.com.bd/p/30e0eae11e7cfcf2924cf41d283553ae.jpg",
+      "name": "Xiaomi Redmi 10A",
+      "price": 1099.99,
+      "rating": 4.7
+    },
+    {
+      "id": "12",
+      "image": "https://static-01.daraz.com.bd/p/19b133906213bcccda357d36de841f97.jpg",
+      "name": "Redmi 12C",
+      "price": 1399.99,
+      "rating": 4.8
+    },
+    {
+      "id": "13",
+      "name": "Steel Metal Bottle 1L",
+      "price": 33,
+      "rating": 4,
+      "image": "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/a9c04ca9fa51408faf2fac8e0117abb9_9366/Steel_Metal_Bottle_1L_Black_EX7288_01_standard.jpg"
+    },
+    {
+      "id": "14",
+      "name": "Steel Metal Bottle 1L",
+      "price": 40,
+      "rating": 5,
+      "image": "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/c45df020e3ae4e9199a4ac7d0001cfb7_9366/Steel_Metal_Bottle_1L_White_EX7301_01_standard.jpg"
+    }
+]

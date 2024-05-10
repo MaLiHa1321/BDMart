@@ -4,7 +4,7 @@ import Footer from '../Routes/Footer';
 
 const MainLayout = () => {
     return (
-        <div className='w-full mx-auto mt-0 p-2 pt-0'>
+        <div className='w-full mx-auto mt-0 p-2 pt-0 bg-base-200'>
             <Navbar></Navbar>
         <Outlet></Outlet>
         <div className='mt-4'>

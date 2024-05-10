@@ -3,50 +3,50 @@
       "id": "1",
       "image": "https://i.ibb.co/zZqwsbM/potato.jpg",
       "name": "Potato",
-      "rating": 4.7
+      "Item": 4
     },
     {
       "id": "2",
       "image": "https://i.ibb.co/Mscc0CV/tomato.jpg",
       "name": "Tomato",
-      "rating": 4.9
+      "Item": 4
     },
     {
       "id": "3",
       "image": "https://static-01.daraz.com.bd/p/986dd21bae23af5b4186e0029dce42a7.jpg",
       "name": "iPhone 12",
-      "rating": 3.5
+      "Item": 3
     },
     {
       "id": "4",
       "image": "https://i.ibb.co/gvrQjh6/tablet.jpg",
       "name": "iPad",
-      "rating": 4.5
+      "Item": 4
     },
     {
       "id": "5",
       "image": "https://i.ibb.co/LrX7sG8/headphone.jpg",
       "name": "Ear-Phone",
-      "rating": 2.9
+      "Item": 2
     },
     {
       "id": "6",
       "image": "https://static-01.daraz.com.bd/p/89a1dda89c94b5bdbe0acbe205fc799c.jpg",
       "name": "Samsung Galaxy F23",
-      "rating": 5.0
+      "Item": 5
     },
     {
       "id": "7",
       "image": "https://i.ibb.co/jJwnGNP/jason-leung-f-XAu-CMEYGY4-unsplash.jpg",
       "name": "Dessert",
-      "rating": 4.7
+      "Item": 4
     },
     {
       "id": "8",
       "image": "https://static-01.daraz.com.bd/p/ed234dd8498445e98c74028ddd0f966b.jpg",
       "name": "Samsung Galaxy Note 5",
     
-      "rating": 4.7
+      "Item": 4
     },
     
   
@@ -55,7 +55,7 @@
       "image": "https://static-01.daraz.com.bd/p/627f7b3da3437c31a24cb6d1a9eb51bd.jpg",
       "name": "Xiaomi Redmi 11",
      
-      "rating": 4.8
+      "Item": 4
     }
 
   ]
